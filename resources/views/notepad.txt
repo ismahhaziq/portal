@@ -1,0 +1,217 @@
+Bullet Points and Image sliding using javascript
+
+<!-- SERVICE SECTION START -->
+    <div id="about-us"
+        class="flex flex-col justify-center items-center pl-4 pr-6 pt-8 sm:pt-24 md:pt-12 lg:pt-20 xl:px-2 ">
+        <div
+            class="flex flex-wrap items-center justify-center gap-x-8 gap-y-8 sm:gap-x-10 lg:gap-x-11 min-[1430px]:flex-nowrap">
+            <!-- Image -->
+            <img src="/assets/index/background-img.png" loading="lazy"
+                class="block xl:hidden rpv-bg-img rpv-bg-img h-[220px] w-[590px] flex-shrink-0 rounded-[30px]  lg:scroll-pl-30 object-cover object-center" />
+
+            <!-- Text Block -->
+            <div class="flex flex-col items-center pt-4 sm:pt-6 md:pt-8">
+                <div class="flex w-full sm:w-[606px] md:w-[700px] flex-col items-start gap-y-6 sm:gap-y-9">
+                    <!-- Handshake Image -->
+                    <div class="flex items-center  sm:px-5">
+                        <img src="/assets/index/services/icon-2.png" loading="lazy"
+                            class="hidden xl:flex h-12 w-auto sm:h-16 md:h-20 flex-shrink-0 object-cover object-center" />
+                    </div>
+
+                    <!-- Title -->
+                    <div class="self-stretch pt-2 sm:pt-3 md:pt-4">
+                        <div
+                            class="rpv-title font-circular-std text-[22px] font-medium leading-normal lg:text-[40px] -mt-[50px] mb-4">
+                            <span>
+                                <p>Comprehensive IT Solutions Tailored for You</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Bullet Points -->
+                    <div class="self-stretch pt-2 sm:pt-3 md:pt-4">
+                        <div
+                            class="rpv-desc font-poppins flex flex-wrap items-start gap-y-6 gap-x-8 text-[14px] sm:grid sm:grid-cols-2 sm:gap-x-8">
+                            <!-- Column 1 -->
+                            <div class="flex w-full">
+                                <ul class="list-disc list-inside space-y-4">
+                                    <li>
+                                        <button onclick="changeImageAndNavigate(1)"
+                                            class="hover:text-blue-600 transition">Design &amp;
+                                            Development</button>
+                                    </li>
+                                    <li>
+                                        <button onclick="changeImageAndNavigate(2)"
+                                            class="hover:text-blue-600 transition">System
+                                            Integration</button>
+                                    </li>
+                                    <li>
+                                        <button onclick="changeImageAndNavigate(3)"
+                                            class="hover:text-blue-600 transition">24/7
+                                            Support</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="flex w-full">
+                                <ul class="list-disc list-inside space-y-4">
+                                    <li>
+                                        <button onclick="changeImageAndNavigate(4)"
+                                            class="hover:text-blue-600 transition">Mobile
+                                            Apps</button>
+                                    </li>
+                                    <li>
+                                        <button onclick="changeImageAndNavigate(5)"
+                                            class="hover:text-blue-600 transition">Project
+                                            Management</button>
+                                    </li>
+                                    <li>
+                                        <button onclick="changeImageAndNavigate(6)"
+                                            class="hover:text-blue-600 transition">On-Site &amp;
+                                            In-House Training</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div
+                        class="flex flex-wrap items-center justify-start gap-x-4 gap-y-2 sm:gap-x-6 min-[1430px]:flex-nowrap">
+                        <div class="relative group">
+                            <a href="{{ route('about-us') }}"
+                                class="inline-flex items-center px-3 py-3 lg:px-7 lg:py-4 lg:text-lg text-sm sm:text-xl font-inter text-black border border-black rounded-full hover:bg-[#225f8C] hover:text-white transition duration-300">
+                                More Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Carousel -->
+            <div class="carousel relative hidden xl:flex rpv-bg-img w-[590px] h-[220px] rounded-[30px] overflow-hidden">
+                <!-- Slide 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img id="service-image" src="/assets/index/services/image-1.png" loading="lazy"
+                        class="h-full w-full object-cover object-center" />
+                    <div class="absolute inset-0 flex justify-between items-center px-4">
+                        <a href="#slide6" class="btn btn-circle bg-white text-black hover:bg-gray-200">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-white text-black hover:bg-gray-200">❯</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img id="service-image" src="/assets/index/services/image-2.png" loading="lazy"
+                        class="h-full w-full object-cover object-center" />
+                    <div class="absolute inset-0 flex justify-between items-center px-4">
+                        <a href="#slide1" class="btn btn-circle bg-white text-black hover:bg-gray-200">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-white text-black hover:bg-gray-200">❯</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img id="service-image" src="/assets/index/services/image-3.png" loading="lazy"
+                        class="h-full w-full object-cover object-center" />
+                    <div class="absolute inset-0 flex justify-between items-center px-4">
+                        <a href="#slide2" class="btn btn-circle bg-white text-black hover:bg-gray-200">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-white text-black hover:bg-gray-200">❯</a>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img id="service-image" id="service-image" src="/assets/index/services/image-4.png" loading="lazy"
+                        class="h-full w-full object-cover object-center" />
+                    <div class="absolute inset-0 flex justify-between items-center px-4">
+                        <a href="#slide3" class="btn btn-circle bg-white text-black hover:bg-gray-200">❮</a>
+                        <a href="#slide5" class="btn btn-circle bg-white text-black hover:bg-gray-200">❯</a>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div id="slide5" class="carousel-item relative w-full">
+                    <img id="service-image" src="/assets/index/services/image-5.png" loading="lazy"
+                        class="h-full w-full object-cover object-center" />
+                    <div class="absolute inset-0 flex justify-between items-center px-4">
+                        <a href="#slide4" class="btn btn-circle bg-white text-black hover:bg-gray-200">❮</a>
+                        <a href="#slide6" class="btn btn-circle bg-white text-black hover:bg-gray-200">❯</a>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div id="slide6" class="carousel-item relative w-full">
+                    <img id="service-image" src="/assets/index/services/image-6.png" loading="lazy"
+                        class="h-full w-full object-cover object-center" />
+                    <div class="absolute inset-0 flex justify-between items-center px-4">
+                        <a href="#slide5" class="btn btn-circle bg-white text-black hover:bg-gray-200">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-white text-black hover:bg-gray-200">❯</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- SERVICE SECTION END -->
+
+
+<!-- <script>
+    // Function to change the image and navigate to the correct slide based on the slide number
+    function changeImageAndNavigate(slideNumber) {
+        // Change the image based on the slide number
+        const imageUrls = [
+            '/assets/index/services/image-1.png',
+            '/assets/index/services/image-2.png',
+            '/assets/index/services/image-3.png',
+            '/assets/index/services/image-4.png',
+            '/assets/index/services/image-5.png',
+            '/assets/index/services/image-6.png'
+        ];
+
+        // Set the image corresponding to the slide number
+        const imageElement = document.getElementById('service-image');
+        imageElement.src = imageUrls[slideNumber - 1]; // Subtract 1 for 0-based indexing
+
+        // Update the URL hash to correspond to the selected slide
+        window.location.hash = `#slide${slideNumber}`;
+
+        // Optionally, you can also hide/show the slides based on the hash
+        const slides = document.querySelectorAll('.carousel-item');
+
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.classList.add('hidden');
+        });
+
+        // Show the selected slide
+        const selectedSlide = document.getElementById(`slide${slideNumber}`);
+        selectedSlide.classList.remove('hidden');
+    }
+
+    // Listen for hash changes to navigate to the appropriate slide
+    window.addEventListener('hashchange', function () {
+        const hash = window.location.hash;
+        const slideNumber = parseInt(hash.replace('#slide', ''));
+
+        if (slideNumber && document.getElementById(hash.substring(1))) {
+            // Set the image based on the hash
+            changeImageAndNavigate(slideNumber);
+        }
+    });
+
+    // Trigger initial load based on URL hash
+    window.addEventListener('load', function () {
+        const hash = window.location.hash;
+        if (hash) {
+            const slideNumber = parseInt(hash.replace('#slide', ''));
+            if (slideNumber && document.getElementById(hash.substring(1))) {
+                changeImageAndNavigate(slideNumber);
+            }
+        } else {
+            // Default to slide1 if no hash is present
+            changeImageAndNavigate(1);
+        }
+    });
+
+</script> -->

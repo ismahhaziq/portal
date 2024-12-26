@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* If put under the 'components', the css under this same level as in the front. So, it will take first  */
+
+@layer components {
+    
+    .flex-container {
+        display: flex;
+        /* Makes this a flex container */
+        justify-content: space-between;
+        border: 1px solid black;
+    }
+
+    .flex-item {
+        padding: 10px;
+        border: 1px solid blue;
+    }
+
+    .nested-item {
+        padding: 5px;
+        border: 1px solid red;
+    }
+
+    .shadow-img {
+        @apply absolute inset-0 bg-black opacity-15 rounded-[30px];
+    }
+
+    .hover-button {
+        @apply inline-flex transform items-center rounded-full border border-black px-3 py-3 font-inter text-sm text-black transition duration-300 sm:text-xl lg:px-7 lg:py-4 lg:text-lg;
+    }
+
+    .hover-arrow {
+    @apply inline-flex transform items-center rounded-full border border-black px-2 py-2 sm:px-3 sm:py-3 font-inter text-xs text-black transition duration-300 md:text-2xl lg:px-4 lg:py-4 lg:text-2xl;
+    }
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('/fonts/CircularStd-Black.eot') format('eot'),
+        url('/fonts/CircularStd-Black.otf') format('otf'),
+        url('/fonts/CircularStd-Black.ttf') format('ttf'),
+        url('/fonts/CircularStd-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* rpv stand for 'responsive' */
+.rpv-bg-img {
+    @apply w-full sm:max-w-[590px] md:max-w-[700px] lg:max-w-[700px] xl:max-w-[580px] sm:h-[450px] md:h-[400px] lg:h-[580px] xl:h-[550px];
+}
+
+
+.rpv-title {
+    @apply sm:text-[48px] sm:leading-[60px] md:text-[40px] md:-mt-[80px] xl:-mt-0 2xl:text-[69px] xl:w-full;
+}
+
+.rpv-desc {
+    @apply sm:text-sm sm:leading-[35px] md:text-[18px] md:-mt-[40px] lg:text-[20px] xl:-mt-8;
+}
+
+.rpv-bullet {
+    @apply sm:text-sm sm:leading-[35px] md:text-[18px] md:-mt-[40px] lg:text-[20px] xl:-mt-8;
+}
+
+@layer utilities {
+    .active-bullet {
+        @apply font-semibold text-[#225f8C] underline underline-offset-2;
+    }
+
+
+}
